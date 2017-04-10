@@ -7,7 +7,7 @@ import de.greenrobot.daogenerator.Schema;
 public class Main {
 
     public static final int DB_VERSION = 1000;
-    public static final String OUTPUT_PACKAGE = "com.nathalieborodina.theatreapp";
+    public static final String OUTPUT_PACKAGE = "com.nathalieborodina.theatreapp.data.model";
     public static final String OUTPUT_FOLDER = "app/src/main/java";
 
     public static void main(String[] args) throws Exception {
@@ -16,8 +16,8 @@ public class Main {
 
         new DaoGenerator().generateAll(schema, OUTPUT_FOLDER);
 
-        addPerfomance(schema);
         addPerfomanceEvent(schema);
+        addTickets(schema);
 
         new DaoGenerator().generateAll(schema, OUTPUT_FOLDER);
     }
@@ -27,13 +27,18 @@ public class Main {
         perfomanceEvent.addIdProperty().autoincrement();
         perfomanceEvent.addLongProperty("eventId");
         perfomanceEvent.addDateProperty("date_time");
+        perfomanceEvent.addStringProperty("title");
     }
 
-    private static void addPerfomance(Schema schema) {
-        Entity perfomance = schema.addEntity("Perfomance");
-        perfomance.addIdProperty().autoincrement();
-        perfomance.addLongProperty("eventId");
-        perfomance.addStringProperty("title");
+    private static void addTickets(Schema schema) {
+        Entity ticket = schema.addEntity("Ticket");
+        ticket.addIdProperty().autoincrement();
+        ticket.addLongProperty("ticketId");
+        ticket.addLongProperty("eventId");
+        ticket.addIntProperty("row");
+        ticket.addIntProperty("seat");
+        ticket.addLongProperty("customerId");
+        ticket.addStringProperty("firstName");
+        ticket.addStringProperty("lastName");
     }
-
 }
