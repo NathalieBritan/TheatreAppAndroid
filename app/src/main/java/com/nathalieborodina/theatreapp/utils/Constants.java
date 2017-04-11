@@ -1,4 +1,4 @@
-package com.nathalieborodina.theatreapp;
+package com.nathalieborodina.theatreapp.utils;
 
 /**
  * Created by nathalieborodina on 4/10/17.

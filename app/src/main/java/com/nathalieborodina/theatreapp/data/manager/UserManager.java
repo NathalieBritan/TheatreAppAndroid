@@ -4,7 +4,7 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.nathalieborodina.theatreapp.BuildConfig;
-import com.nathalieborodina.theatreapp.Constants;
+import com.nathalieborodina.theatreapp.utils.Constants;
 
 /**
  * Created by nathalieborodina on 4/10/17.

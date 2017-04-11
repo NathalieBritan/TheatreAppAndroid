@@ -1,14 +1,9 @@
 package com.nathalieborodina.theatreapp.activity;
 
-import android.animation.Animator;
-import android.annotation.TargetApi;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +11,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.nathalieborodina.theatreapp.BuildConfig;
-import com.nathalieborodina.theatreapp.Constants;
+import com.nathalieborodina.theatreapp.utils.Constants;
 import com.nathalieborodina.theatreapp.data.manager.DataManager;
 import com.nathalieborodina.theatreapp.fragment.BaseFragment;
 import com.nathalieborodina.theatreapp.utils.FragmentTransactionManager;

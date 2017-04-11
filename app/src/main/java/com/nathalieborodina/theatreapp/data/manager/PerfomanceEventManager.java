@@ -15,7 +15,6 @@ import java.util.List;
 
 public class PerfomanceEventManager{
 
-    private long mUserid;
     private  DataManager mDataManager;
 
     public PerfomanceEventManager(DataManager dataModel) {
@@ -24,8 +23,6 @@ public class PerfomanceEventManager{
 
             if (mDataManager.getUserManager().getUserId() == null)
                mDataManager.getUserManager().checkUserLogged();
-
-            mUserid = Long.parseLong(mDataManager.getUserManager().getUserId());
         }
 
         public List<PerfomanceEvent> getAllPerfomanceEvent() {

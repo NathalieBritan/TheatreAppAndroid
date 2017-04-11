@@ -4,7 +4,7 @@ package com.nathalieborodina.theatreapp.data.manager;
 
 import android.database.sqlite.SQLiteDatabase;
 
-import com.nathalieborodina.theatreapp.Constants;
+import com.nathalieborodina.theatreapp.utils.Constants;
 import com.nathalieborodina.theatreapp.activity.BaseActivity;
 import com.nathalieborodina.theatreapp.data.model.DaoMaster;
 import com.nathalieborodina.theatreapp.data.model.DaoSession;
@@ -50,7 +50,7 @@ public class DataManager {
         return mUserManager;
     }
 
-    public PerfomanceEventManager getTripManager() {
+    public PerfomanceEventManager getmPerfomanceEventManager() {
 
         if (mPerfomanceEventManager == null)
             mPerfomanceEventManager = new PerfomanceEventManager(this);

@@ -30,12 +30,4 @@ public abstract class BaseFragment extends Fragment {
         return getBaseActivity().getFragmentTransactionManager();
     }
 
-    public void onDialogChoiceConfirm(int dialogId) {
-
-    }
-
-    public void onDialogChoiceCancel(int dialogId) {
-
-    }
-
 }
