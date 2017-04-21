@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.nathalieborodina.theatreapp.R;
 import com.nathalieborodina.theatreapp.data.model.PerfomanceEvent;
 
 import java.util.ArrayList;
@@ -26,7 +27,6 @@ public class TicketDetailsFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_ticket_details, container, false);
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.tripContentRecyclerView);
         return view;
 
     }
@@ -46,4 +46,8 @@ public class TicketDetailsFragment extends BaseFragment {
         mRecyclerView.getAdapter().notifyDataSetChanged();
     }
 
+    @Override
+    public String getFragmentTag() {
+        return null;
+    }
 }
